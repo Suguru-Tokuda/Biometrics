@@ -9,7 +9,9 @@ import SwiftUI
 
 struct AuthenticationSuccessView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Successfully Authenticated!")
+            .font(.title2.weight(.bold))
+            .foregroundStyle(.blue)
     }
 }
 

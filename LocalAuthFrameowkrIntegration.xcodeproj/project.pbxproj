@@ -16,6 +16,7 @@
 		BB9D07352B31E90500C03B75 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D07342B31E90500C03B75 /* AuthenticationError.swift */; };
 		BB9D07382B31E97C00C03B75 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D07372B31E97C00C03B75 /* Credentials.swift */; };
 		BB9D073C2B31ECB300C03B75 /* LocalAuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D073B2B31ECB300C03B75 /* LocalAuthenticationViewModel.swift */; };
+		BB9D07412B324C0900C03B75 /* AuthenticationSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D07402B324C0900C03B75 /* AuthenticationSuccessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		BB9D07342B31E90500C03B75 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
 		BB9D07372B31E97C00C03B75 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		BB9D073B2B31ECB300C03B75 /* LocalAuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthenticationViewModel.swift; sourceTree = "<group>"; };
+		BB9D07402B324C0900C03B75 /* AuthenticationSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSuccessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		BB9D071F2B31DFD000C03B75 /* LocalAuthFrameowkrIntegration */ = {
 			isa = PBXGroup;
 			children = (
+				BB9D073F2B324BF600C03B75 /* Views */,
 				BB9D07392B31ECA000C03B75 /* ViewModels */,
 				BB9D07362B31E97400C03B75 /* Models */,
 				BB9D07312B31E79A00C03B75 /* Enums */,
@@ -112,6 +115,14 @@
 				BB9D073B2B31ECB300C03B75 /* LocalAuthenticationViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BB9D073F2B324BF600C03B75 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB9D07402B324C0900C03B75 /* AuthenticationSuccessView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 				BB9D07332B31E89700C03B75 /* BiometricType.swift in Sources */,
 				BB9D073C2B31ECB300C03B75 /* LocalAuthenticationViewModel.swift in Sources */,
 				BB9D07352B31E90500C03B75 /* AuthenticationError.swift in Sources */,
+				BB9D07412B324C0900C03B75 /* AuthenticationSuccessView.swift in Sources */,
 				BB9D07302B31E63300C03B75 /* BiometricManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,9 +12,9 @@ class LocalAuthenticationViewModel: ObservableObject {
     @Published var password: String = ""
     @Published var biometricType: BiometricType?
     @Published var authenticationSuccess: Bool = false
+    @Published var authError: AuthenticationError?
+    @Published var errorOccurred = false
     var localAuthManager: LocalAuthenticationManager?
-    var authError: AuthenticationError?
-    var errorOccurred = false
     
     init(localAuthManager: LocalAuthenticationManager = LocalAuthenticationManager()) {
         self.localAuthManager = localAuthManager
@@ -25,13 +25,13 @@ class LocalAuthenticationViewModel: ObservableObject {
     }
     
     func authenticate() {
-        localAuthManager?.authenticateUser(email: self.email, password: self.password, completion: { response in
+        localAuthManager?.authenticateUser(email: self.email, password: self.password, completion: { [weak self] response in
             DispatchQueue.main.async {
-                switch response {
-                case .success(let success):
-                    self.authenticationSuccess = success
-                case .failure(let error):
-                    DispatchQueue.main.async {
+                if let self = self {
+                    switch response {
+                    case .success(let success):
+                        self.authenticationSuccess = success
+                    case .failure(let error):
                         self.authError = error
                         self.errorOccurred = true
                     }
