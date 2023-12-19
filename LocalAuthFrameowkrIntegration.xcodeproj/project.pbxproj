@@ -11,6 +11,11 @@
 		BB9D07232B31DFD000C03B75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D07222B31DFD000C03B75 /* ContentView.swift */; };
 		BB9D07252B31DFD100C03B75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9D07242B31DFD100C03B75 /* Assets.xcassets */; };
 		BB9D07282B31DFD100C03B75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9D07272B31DFD100C03B75 /* Preview Assets.xcassets */; };
+		BB9D07302B31E63300C03B75 /* BiometricManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D072F2B31E63300C03B75 /* BiometricManager.swift */; };
+		BB9D07332B31E89700C03B75 /* BiometricType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D07322B31E89700C03B75 /* BiometricType.swift */; };
+		BB9D07352B31E90500C03B75 /* AuthenticationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D07342B31E90500C03B75 /* AuthenticationError.swift */; };
+		BB9D07382B31E97C00C03B75 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D07372B31E97C00C03B75 /* Credentials.swift */; };
+		BB9D073C2B31ECB300C03B75 /* LocalAuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9D073B2B31ECB300C03B75 /* LocalAuthenticationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		BB9D07222B31DFD000C03B75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB9D07242B31DFD100C03B75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB9D07272B31DFD100C03B75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB9D072F2B31E63300C03B75 /* BiometricManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricManager.swift; sourceTree = "<group>"; };
+		BB9D07322B31E89700C03B75 /* BiometricType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricType.swift; sourceTree = "<group>"; };
+		BB9D07342B31E90500C03B75 /* AuthenticationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationError.swift; sourceTree = "<group>"; };
+		BB9D07372B31E97C00C03B75 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		BB9D073B2B31ECB300C03B75 /* LocalAuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthenticationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,10 @@
 		BB9D071F2B31DFD000C03B75 /* LocalAuthFrameowkrIntegration */ = {
 			isa = PBXGroup;
 			children = (
+				BB9D07392B31ECA000C03B75 /* ViewModels */,
+				BB9D07362B31E97400C03B75 /* Models */,
+				BB9D07312B31E79A00C03B75 /* Enums */,
+				BB9D072E2B31E60400C03B75 /* Utilities */,
 				BB9D07202B31DFD000C03B75 /* LocalAuthFrameowkrIntegrationApp.swift */,
 				BB9D07222B31DFD000C03B75 /* ContentView.swift */,
 				BB9D07242B31DFD100C03B75 /* Assets.xcassets */,
@@ -65,6 +79,39 @@
 				BB9D07272B31DFD100C03B75 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BB9D072E2B31E60400C03B75 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BB9D072F2B31E63300C03B75 /* BiometricManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BB9D07312B31E79A00C03B75 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				BB9D07342B31E90500C03B75 /* AuthenticationError.swift */,
+				BB9D07322B31E89700C03B75 /* BiometricType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		BB9D07362B31E97400C03B75 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB9D07372B31E97C00C03B75 /* Credentials.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BB9D07392B31ECA000C03B75 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BB9D073B2B31ECB300C03B75 /* LocalAuthenticationViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB9D07382B31E97C00C03B75 /* Credentials.swift in Sources */,
 				BB9D07232B31DFD000C03B75 /* ContentView.swift in Sources */,
 				BB9D07212B31DFD000C03B75 /* LocalAuthFrameowkrIntegrationApp.swift in Sources */,
+				BB9D07332B31E89700C03B75 /* BiometricType.swift in Sources */,
+				BB9D073C2B31ECB300C03B75 /* LocalAuthenticationViewModel.swift in Sources */,
+				BB9D07352B31E90500C03B75 /* AuthenticationError.swift in Sources */,
+				BB9D07302B31E63300C03B75 /* BiometricManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +327,7 @@
 				DEVELOPMENT_TEAM = FVEGF5DQ7U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "FaceID is Disabled";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +357,7 @@
 				DEVELOPMENT_TEAM = FVEGF5DQ7U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "FaceID is Disabled";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

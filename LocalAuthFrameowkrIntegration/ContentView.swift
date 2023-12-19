@@ -8,13 +8,59 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var vm: LocalAuthenticationViewModel = LocalAuthenticationViewModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Local Authentication")
+                .font(.largeTitle.weight(.bold))
+                .foregroundStyle(.blue)
+            Spacer()
+            TextField("Email", text: $vm.email)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(.gray.opacity(0.5), lineWidth: 1)
+                )
+            SecureField("Password", text: $vm.password)
+                .padding(.horizontal, 10)
+                .padding(.vertical, 5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(.gray.opacity(0.5), lineWidth: 1)
+                )
+            if let biometricType = vm.biometricType,
+               biometricType != .none {
+                Button(action: {
+                    vm.authenticate()
+                }, label: {
+                    Image(systemName: biometricType == .faceID ? "faceid" : "touchid")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                })
+
+//                .alert(isPresented: $vm.errorOccurred, error: vm.authError) {
+//                    Button(action: {
+//                        vm.suppressError()
+//                    }, label: {
+//                        Text("OK")
+//                    })                    
+//                }
+            }
+            
+            Spacer()
+                
         }
+        .alert("Authentication Error", isPresented: $vm.errorOccurred, actions: {
+            Button(action: {
+                vm.suppressError()
+            }, label: {
+                Text("OK")
+            })
+        }, message: {
+            Text(vm.authError?.localizedDescription ?? "")
+        })
         .padding()
     }
 }
